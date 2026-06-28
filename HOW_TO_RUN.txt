@@ -1,0 +1,152 @@
+================================================================================
+        POTHOLE DETECTION SYSTEM - GUI APPLICATION
+        How to Run Instructions
+        University of Agriculture Peshawar - FYP 2026
+================================================================================
+
+PROJECT: Pothole Detection using YOLOv11
+MODEL: YOLO11m
+CLASSES: 3 Pothole Types (medium-pothole, risk-pothole, safe-pothole)
+VERSION: v1.0
+
+================================================================================
+STEP-BY-STEP INSTRUCTIONS TO RUN THE GUI
+================================================================================
+
+STEP 1: OPEN TERMINAL
+--------
+Open PowerShell or Command Prompt in your project directory:
+  - Navigate to: d:\MY WORK\FYP_project\Pothole Detection using YOLOv11
+
+STEP 2: CREATE VIRTUAL ENVIRONMENT (First Time Only)
+--------
+Run this command to create a virtual environment:
+  
+  python -m venv venv
+
+OR use the full Python path if python command doesn't work:
+  
+  C:/Users/sdaud/.local/bin/python3.14.exe -m venv venv
+
+STEP 3: ACTIVATE VIRTUAL ENVIRONMENT
+--------
+On Windows PowerShell:
+  
+  .\venv\Scripts\Activate.ps1
+
+On Windows Command Prompt (cmd.exe):
+  
+  venv\Scripts\activate.bat
+
+After activation, you should see (venv) at the beginning of your terminal prompt.
+
+STEP 4: INSTALL DEPENDENCIES (First Time Only)
+--------
+Install all required packages:
+  
+  pip install ultralytics opencv-python pillow
+
+OR use this command if pip doesn't work:
+  
+  .\venv\Scripts\pip install ultralytics opencv-python pillow
+
+This will install:
+  - ultralytics (YOLOv11 model)
+  - opencv-python (cv2 - video/image processing)
+  - pillow (image handling)
+  - And all their dependencies (numpy, torch, torchvision, matplotlib, etc.)
+
+STEP 5: RUN THE GUI APPLICATION
+--------
+Execute the GUI with this command:
+  
+  python gui.py
+
+OR if python doesn't work:
+  
+  .\venv\Scripts\python gui.py
+
+The Pothole Detection GUI window will open automatically.
+
+STEP 6: USE THE GUI
+--------
+Once the GUI is open, you can:
+  1. Click "Load Image" to select an image file for detection
+  2. Click "Load Video" to select a video file for detection
+  3. Adjust confidence threshold (default: 0.25)
+  4. Adjust IOU threshold (default: 0.45)
+  5. View detection results with bounding boxes
+  6. See classification labels:
+     - GREEN = Safe Pothole
+     - ORANGE = Medium Pothole
+     - RED = Risk Pothole
+
+STEP 7: CLOSE THE APPLICATION
+--------
+Simply close the GUI window or press Ctrl+C in the terminal.
+
+================================================================================
+QUICK COMMAND REFERENCE (After First-Time Setup)
+================================================================================
+
+To run the application every time:
+
+  1. Open PowerShell in project directory
+  2. .\venv\Scripts\Activate.ps1
+  3. python gui.py
+
+Or as a single command:
+  
+  .\venv\Scripts\python gui.py
+
+================================================================================
+SYSTEM REQUIREMENTS
+================================================================================
+
+- Windows OS (Windows 10 or later)
+- Python 3.8 or higher (Python 3.14 recommended)
+- At least 4GB RAM
+- GPU optional (improves detection speed)
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+Problem: "python: command not found"
+Solution: Use the full path: C:/Users/sdaud/.local/bin/python3.14.exe
+
+Problem: "ModuleNotFoundError: No module named 'cv2'"
+Solution: Reinstall opencv-python:
+  .\venv\Scripts\pip install --force-reinstall opencv-python
+
+Problem: "No module named 'tkinter'"
+Solution: tkinter comes with Python by default. If missing, reinstall Python.
+
+Problem: GUI doesn't open
+Solution: Check if DISPLAY is available. Try running from a local terminal.
+
+Problem: Slow detection
+Solution: Use GPU if available. YOLO will automatically use GPU if detected.
+
+================================================================================
+PROJECT STRUCTURE
+================================================================================
+
+Pothole Detection using YOLOv11/
+  ├── gui.py                                    (Main GUI application)
+  ├── venv/                                     (Virtual environment - created automatically)
+  ├── Model coding and data/
+  │   └── pothole-detection-yolov11.ipynb      (Training notebook)
+  ├── Proposal and thesis/                      (Documentation folder)
+  ├── detected_video.mp4                        (Sample output video)
+  └── detected_images/                          (Sample output images)
+
+================================================================================
+FOR MORE HELP
+================================================================================
+
+- Check gui.py file for source code
+- Review requirements.txt for all dependencies
+- Contact: University of Agriculture Peshawar - FYP 2026
+
+================================================================================

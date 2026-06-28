@@ -1,0 +1,7 @@
+Split,Class,Count
+TRAIN,medium-pothole,3594
+TRAIN,risk-pothole,2540
+TRAIN,safe-pothole,3465
+TEST,medium-pothole,161
+TEST,risk-pothole,114
+TEST,safe-pothole,185

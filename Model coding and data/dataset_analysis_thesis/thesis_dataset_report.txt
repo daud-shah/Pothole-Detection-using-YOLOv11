@@ -1,0 +1,64 @@
+================================================================================
+POTHOLE DETECTION DATASET - THESIS REPORT
+Dataset: Detection-Potholes-Classes-1
+================================================================================
+
+1. DATASET OVERVIEW
+----------------------------------------
+Total Images: 3450
+Total Annotations: 10059
+Number of Classes: 3
+Classes: medium-pothole, risk-pothole, safe-pothole
+
+2. DATASET SPLIT DISTRIBUTION
+----------------------------------------
+TRAIN Split: 3294 images (95.5%)
+TEST Split: 156 images (4.5%)
+
+3. CLASS DISTRIBUTION
+----------------------------------------
+medium-pothole      :  3755 annotations (37.33%)
+risk-pothole        :  2654 annotations (26.38%)
+safe-pothole        :  3650 annotations (36.29%)
+
+Per-Split Class Distribution:
+
+TRAIN Split:
+   medium-pothole      : 3594 (37.44% of split)
+   risk-pothole        : 2540 (26.46% of split)
+   safe-pothole        : 3465 (36.10% of split)
+
+TEST Split:
+   medium-pothole      :  161 (35.00% of split)
+   risk-pothole        :  114 (24.78% of split)
+   safe-pothole        :  185 (40.22% of split)
+
+4. IMAGE PROPERTIES
+----------------------------------------
+Image Dimensions:
+   Width  - Range: 640 - 640px, Mean: 640.0px
+   Height - Range: 640 - 640px, Mean: 640.0px
+File Sizes:
+   Range: 25.39 - 164.66 KB
+   Mean: 95.83 KB
+   Median: 97.10 KB
+
+5. ANNOTATION STATISTICS
+----------------------------------------
+TRAIN Split:
+   Objects per image - Min: 0, Max: 35, Mean: 2.91
+TEST Split:
+   Objects per image - Min: 0, Max: 16, Mean: 2.95
+
+6. DATASET QUALITY ASSESSMENT
+----------------------------------------
+Strengths:
+   - Balanced split distribution
+   - Multiple risk levels for pothole classification
+   - Suitable for YOLO-based detection
+   - Real-world pothole scenarios
+
+Considerations:
+   - Verify class balance for risk-pothole category
+   - Consider data augmentation for underrepresented classes
+   - Validate annotation consistency across splits

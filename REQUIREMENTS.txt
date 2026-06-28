@@ -1,0 +1,184 @@
+================================================================================
+        POTHOLE DETECTION SYSTEM - PROJECT REQUIREMENTS
+        All Python Package Dependencies
+        University of Agriculture Peshawar - FYP 2026
+================================================================================
+
+PROJECT DEPENDENCIES
+================================================================================
+
+MAIN PACKAGES (Direct Dependencies):
+-----------
+ultralytics>=8.0.0        # YOLOv11 model and detection framework
+opencv-python>=4.8.0      # cv2 - Image and video processing
+pillow>=9.0.0             # PIL - Image handling and manipulation
+
+AUTOMATIC DEPENDENCIES (Installed with the main packages):
+-----------
+numpy>=2.0.0              # Numerical computing library
+torch>=2.0.0              # PyTorch - Deep learning framework
+torchvision>=0.15.0       # Computer vision utilities for PyTorch
+matplotlib>=3.7.0         # Data visualization and plotting
+scipy>=1.10.0             # Scientific computing
+pyyaml>=6.0               # YAML configuration parsing
+requests>=2.30.0          # HTTP library for downloads
+psutil>=5.9.0             # System and process utilities
+polars>=0.18.0            # Data manipulation library
+ultralytics-thop>=2.0.0   # Theoretical FLOP calculation
+
+Additional PyTorch dependencies:
+  - filelock
+  - typing-extensions
+  - setuptools
+  - sympy
+  - networkx
+  - jinja2
+  - fsspec
+  - mpmath
+  - MarkupSafe
+
+Matplotlib dependencies:
+  - contourpy
+  - cycler
+  - fonttools
+  - kiwisolver
+  - packaging
+  - pyparsing
+  - python-dateutil
+  - six
+
+Requests dependencies:
+  - charset-normalizer
+  - idna
+  - urllib3
+  - certifi
+
+================================================================================
+HOW TO INSTALL REQUIREMENTS
+================================================================================
+
+Option 1: Install Main Packages Only (Recommended)
+-----------
+pip install ultralytics opencv-python pillow
+
+Option 2: Install from Requirements File (If You Create One)
+-----------
+pip install -r requirements.txt
+
+Option 3: Install with Specific Versions
+-----------
+pip install ultralytics==8.4.41 opencv-python==4.13.0.92 pillow==12.2.0
+
+================================================================================
+SYSTEM SPECIFICATIONS
+================================================================================
+
+Python Version:
+  - Required: Python 3.8 or higher
+  - Recommended: Python 3.14 (current environment)
+  - Tested on: Python 3.14.3
+
+Operating System:
+  - Windows 10/11 (Primary development environment)
+  - Linux/Mac (Should work with modifications)
+
+RAM Requirement:
+  - Minimum: 4GB
+  - Recommended: 8GB or higher
+
+GPU (Optional):
+  - NVIDIA GPU with CUDA support (recommended for faster detection)
+  - CPU-only mode works but slower
+  - PyTorch will auto-detect available GPU
+
+Disk Space:
+  - Virtual environment: ~2-3GB
+  - YOLO11m model weights: ~50-100MB (downloaded on first use)
+  - Total project: ~3-4GB
+
+================================================================================
+CREATING A REQUIREMENTS.TXT FILE
+================================================================================
+
+To create a requirements.txt file for your project, run:
+
+pip freeze > requirements.txt
+
+This will save all installed packages to requirements.txt.
+
+Future users can then install all requirements with:
+
+pip install -r requirements.txt
+
+================================================================================
+VERIFYING INSTALLATION
+================================================================================
+
+To verify all packages are installed correctly:
+
+python -c "import tkinter; import cv2; import PIL; from ultralytics import YOLO; print('All packages installed successfully!')"
+
+Or check individual packages:
+
+python -c "import cv2; print('OpenCV version:', cv2.__version__)"
+python -c "import ultralytics; print('Ultralytics version:', ultralytics.__version__)"
+python -c "import PIL; print('Pillow version:', PIL.__version__)"
+python -c "import torch; print('PyTorch version:', torch.__version__)"
+
+================================================================================
+VIRTUAL ENVIRONMENT SETUP
+================================================================================
+
+Python includes tkinter by default (required for GUI):
+  - tkinter - Built-in GUI toolkit
+  - ttk - Themed tkinter widgets
+  - filedialog - File selection dialogs
+  - messagebox - Message and notification dialogs
+
+These don't need to be installed separately.
+
+================================================================================
+KNOWN COMPATIBILITY
+================================================================================
+
+Tested Versions:
+  - Python 3.14.3
+  - ultralytics 8.4.41
+  - opencv-python 4.13.0.92
+  - pillow 12.2.0
+  - torch 2.11.0
+  - torchvision 0.26.0
+
+Compatible GPU Drivers:
+  - NVIDIA CUDA 12.1+
+  - cuDNN 8.9+
+
+================================================================================
+UPDATE NOTES
+================================================================================
+
+To upgrade packages to latest versions:
+
+pip install --upgrade ultralytics opencv-python pillow torch torchvision
+
+To upgrade pip itself:
+
+python -m pip install --upgrade pip
+
+================================================================================
+TROUBLESHOOTING INSTALLATION
+================================================================================
+
+Issue: "pip is not recognized"
+Solution: Use: python -m pip install <package>
+
+Issue: Permission denied
+Solution: Try: pip install --user <package>
+
+Issue: Long installation time
+Solution: Large packages like torch and torchvision take time. Be patient.
+
+Issue: Build errors
+Solution: Ensure you have Visual C++ build tools installed on Windows
+
+================================================================================
