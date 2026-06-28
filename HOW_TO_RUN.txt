@@ -50,6 +50,8 @@ OR use this command if pip doesn't work:
   
   .\venv\Scripts\pip install ultralytics opencv-python pillow
 
+OR use this command : python -m pip install -r REQUIREMENTS.txt
+
 This will install:
   - ultralytics (YOLOv11 model)
   - opencv-python (cv2 - video/image processing)
